@@ -8,12 +8,30 @@ import java.util.Date;
 public class Hotel {
 
     private String hid;
-    private String hotelname;
+    private String hotelName;
     private String hotelCity;
-
     private int price;
-    private int room;
-    private Date bookingDate;
+    private int rooms;
+    private Date availableFrom;
+    private Date availableTill;
+
+    public Date getAvailableFrom() {
+        return availableFrom;
+    }
+
+    public void setAvailableFrom(Date availableFrom) {
+        this.availableFrom = availableFrom;
+    }
+
+    public Date getAvailableTill() {
+        return availableTill;
+    }
+
+    public void setAvailableTill(Date availableTill) {
+        this.availableTill = availableTill;
+    }
+
+
 
     public String getHid() {
         return hid;
@@ -24,11 +42,11 @@ public class Hotel {
     }
 
     public String getHotelname() {
-        return hotelname;
+        return hotelName;
     }
 
-    public void setHotelname(String hotelname) {
-        this.hotelname = hotelname;
+    public void setHotelname(String hotelName) {
+        this.hotelName = hotelName;
     }
 
     public String getHotelCity() {
@@ -47,20 +65,12 @@ public class Hotel {
         this.price = price;
     }
 
-    public int getRoom() {
-        return room;
+    public int getRooms() {
+        return rooms;
     }
 
-    public void setRoom(int room) {
-        this.room = room;
-    }
-
-    public Date getBookingDate() {
-        return bookingDate;
-    }
-
-    public void setBookingDate(Date bookingDate) {
-        this.bookingDate = bookingDate;
+    public void setRooms(int rooms) {
+        this.rooms = rooms;
     }
 
 

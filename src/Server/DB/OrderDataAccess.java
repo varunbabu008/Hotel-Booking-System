@@ -13,21 +13,21 @@ import Server.util.DBUtil;
 
 public class OrderDataAccess  {
 
-    public boolean saveOrderToCEA(Order order) {
-        String sql = "insert into cea_order values (?,?,?) ";
+    public boolean saveOrderToTAJ(Order order) {
+        String sql = "insert into taj_order values (?,?,?) ";
         return saveOrderToServer(order, sql);
     }
 
 
 
-    public boolean saveOrderToAC(Order order) {
-        String sql = "insert into ac_order values (?,?,?) ";
+    public boolean saveOrderToBLU(Order order) {
+        String sql = "insert into blu_order values (?,?,?) ";
         return saveOrderToServer(order, sql);
     }
 
 
-    public boolean saveOrderToQan(Order order) {
-        String sql = "insert into qantas_order values (?,?,?) ";
+    public boolean saveOrderToRAD(Order order) {
+        String sql = "insert into rad_order values (?,?,?) ";
         return saveOrderToServer(order, sql);
     }
 
@@ -44,7 +44,7 @@ public class OrderDataAccess  {
         try {
             PreparedStatement pstmt = (PreparedStatement) conn.prepareStatement(sql);
             pstmt.setInt(1, order.getOid());
-            pstmt.setString(2, order.getFid());
+            pstmt.setString(2, order.getHid());
             pstmt.setString(3, order.getUsername());
             int state = pstmt.executeUpdate();
             if(state==1)
@@ -63,25 +63,25 @@ public class OrderDataAccess  {
 
 
 
-    public List<Order> checkOrderFromCEA(String username) {
-        String sql = "select * from cea_order where username=?";
-        String column_fid = "fid";
-        return checkOrderFromServer(username, sql, column_fid);
+    public List<Order> checkOrderFromTAJ(String username) {
+        String sql = "select * from taj_order where taj_username=?";
+        String column_hid = "taj_hid";
+        return checkOrderFromServer(username, sql, column_hid);
     }
 
 
-    public List<Order> checkOrderFromAC(String username) {
-        String sql = "select * from ac_order where ac_username=?";
-        String column_fid = "ac_fid";
-        return checkOrderFromServer(username, sql, column_fid);
+    public List<Order> checkOrderFromBLU(String username) {
+        String sql = "select * from blu_order where blu_username=?";
+        String column_hid = "blu_hid";
+        return checkOrderFromServer(username, sql, column_hid);
     }
 
 
 
-    public List<Order> checkOrderFromQan(String username) {
-        String sql = "select * from qantas_order where qan_username=?";
-        String column_fid = "qan_fid";
-        return checkOrderFromServer(username, sql, column_fid);
+    public List<Order> checkOrderFromRAD(String username) {
+        String sql = "select * from rad_order where rad_username=?";
+        String column_hid = "rad_hid";
+        return checkOrderFromServer(username, sql, column_hid);
     }
 
     private List<Order> checkOrderFromServer(String username, String sql,
@@ -99,7 +99,7 @@ public class OrderDataAccess  {
                 int oid = rs.getInt("oid");
                 String fid = rs.getString(column_fid);
                 order.setOid(oid);
-                order.setFid(fid);
+                order.setHid(fid);
                 order.setUsername(username);
                 list.add(order);
             }
@@ -112,34 +112,34 @@ public class OrderDataAccess  {
 
 
 
-    public boolean orderExistedFromCEA(String fid,String username) {
-        String sql = "select fid from cea_order where fid=? and username=? ";
-        String columnName = "fid";
-        return orderExistedFromServer(fid,username, sql, columnName);
+    public boolean orderExistedFromTAJ(String hid,String username) {
+        String sql = "select taj_hid from taj_order where taj_hid=? and taj_username=? ";
+        String columnName = "taj_hid";
+        return orderExistedFromServer(hid,username, sql, columnName);
     }
 
 
 
-    public boolean orderExistedFromAC(String fid,String username) {
-        String sql = "select ac_fid from ac_order where ac_fid=? and ac_username=? ";
-        String columnName = "ac_fid";
-        return orderExistedFromServer(fid,username, sql, columnName);
+    public boolean orderExistedFromBLU(String hid,String username) {
+        String sql = "select blu_hid from blu_order where blu_hid=? and blu_username=? ";
+        String columnName = "blu_hid";
+        return orderExistedFromServer(hid,username, sql, columnName);
     }
 
 
 
-    public boolean orderExistedFromQAN(String fid,String username) {
-        String sql = "select qan_fid from qantas_order where qan_fid=? and qan_username=? ";
-        String columnName = "qan_fid";
-        return orderExistedFromServer(fid, username, sql, columnName);
+    public boolean orderExistedFromRAD(String hid,String username) {
+        String sql = "select rad_hid from rad_order where rad_hid=? and rad_username=? ";
+        String columnName = "rad_hid";
+        return orderExistedFromServer(hid, username, sql, columnName);
     }
 
-    private boolean orderExistedFromServer(String fid, String username, String sql,String columnName) {
+    private boolean orderExistedFromServer(String hid, String username, String sql,String columnName) {
         DBUtil util = new DBUtil();
         Connection conn = util.getConn();
         try {
             PreparedStatement pstmt = conn.prepareStatement(sql);
-            pstmt.setString(1, fid);
+            pstmt.setString(1, hid);
             pstmt.setString(2, username);
             ResultSet rs = pstmt.executeQuery();
             while(rs.next()){

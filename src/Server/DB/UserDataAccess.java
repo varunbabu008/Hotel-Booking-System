@@ -1,5 +1,4 @@
 package Server.DB;
-import
 /**
  * Created by varunbabu on 1/4/17.
  */
@@ -8,28 +7,29 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
-
+import Server.util.DBUtil;
+import Server.Entity.User;
 
 public class UserDataAccess {
 
 
-    public boolean queryUserExistedFromCea(String username) {
-        String sql = "select username from cea_user where username=? ";
-        String columnName = "username";
+    public boolean queryUserExistedFromTAJ(String username) {
+        String sql = "select taj_username from taj_user where taj_username=? ";
+        String columnName = "taj_username";
         return queryUserExistedFromServer(username, sql, columnName);
     }
 
 
-    public boolean queryUserExistedFromAc(String username) {
-        String sql = "select ac_username from ac_user where ac_username=? ";
-        String columnName = "ac_username";
+    public boolean queryUserExistedFromBLU(String username) {
+        String sql = "select blu_username from blu_user where blu_username=? ";
+        String columnName = "blu_username";
         return queryUserExistedFromServer(username, sql, columnName);
     }
 
 
-    public boolean queryUserExistedFromQan(String username) {
-        String sql = "select qan_username from qantas_user where qan_username=? ";
-        String columnName = "qan_username";
+    public boolean queryUserExistedFromRAD(String username) {
+        String sql = "select rad_username from rad_user where rad_username=? ";
+        String columnName = "rad_username";
         return queryUserExistedFromServer(username, sql, columnName);
     }
 
@@ -58,10 +58,22 @@ public class UserDataAccess {
     }
 
 
-    public boolean insertUserToQan(User user) {
-        String sql = "insert into qantas_user values (?,?,?,?)";
+
+    public boolean insertUserToTAJ(User user) {
+        String sql = "insert into taj_user values (?,?,?,?)";
         return insertNewUserToServer(user, sql);
     }
+    public boolean insertUserToBLU(User user) {
+        String sql = "insert into blu_user values (?,?,?,?)";
+        return insertNewUserToServer(user, sql);
+    }
+
+
+    public boolean insertUserToRAD(User user) {
+        String sql = "insert into rad_user values (?,?,?,?)";
+        return insertNewUserToServer(user, sql);
+    }
+
 
     private boolean insertNewUserToServer(User user, String sql) {
         DBUtil util = new DBUtil();
@@ -89,15 +101,6 @@ public class UserDataAccess {
     }
 
 
-    public boolean insertUserToAc(User user) {
-        String sql = "insert into ac_user values (?,?,?,?)";
-        return insertNewUserToServer(user, sql);
-    }
 
-
-    public boolean insertUserToCea(User user) {
-        String sql = "insert into cea_user values (?,?,?,?)";
-        return insertNewUserToServer(user, sql);
-    }
 
 }
