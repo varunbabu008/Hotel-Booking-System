@@ -160,7 +160,7 @@ public class HotelBookingClientHOPP {
         String email = arr[3];
         String creditcard = arr[4];
 
-        String airRE = "(qan|cea|ac)";
+        String airRE = "(taj|blu|rad)";
         String nameRE = "^[A-Za-z]+$";
         String phoneRE = "^((13[0-9])|(15[^4,\\D])|(18[0,5-9]))\\d{8}$";
         String mailRE = "^([a-z0-9A-Z]+[-|\\.]?)+[a-z0-9A-Z]@([a-z0-9A-Z]+(-[a-z0-9A-Z]+)?\\.)+[a-zA-Z]{2,}$";
@@ -182,7 +182,7 @@ public class HotelBookingClientHOPP {
                 else
                     System.out.println("Illegal name!");
             else
-                System.out.println("Only support: qan|cea|ac");
+                System.out.println("Only support: taj|blu|rad");
         }else{
             System.out.println("Format: REG <airline,username,phone,email,creditcard>");
         }

@@ -18,6 +18,8 @@ public class HotelBookingConstants {
     //public static final String QUERY = "QUERY";
 
 
+
+
     public static final int PORT = 8188;
 
 
