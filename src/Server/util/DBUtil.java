@@ -53,9 +53,6 @@ public final class DBUtil {
     public Connection getConn(){
         Connection conn = null;
         try {
-            //conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/hotel","varun","  v");
-            //(url, user, password);
-            //conn = DriverManager.getConnection(url, user, password);
             System.out.println(url);
             System.out.println(user);
             System.out.println(password);

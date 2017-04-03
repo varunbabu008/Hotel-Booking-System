@@ -140,7 +140,7 @@ public class HotelDataAccess {
             pstmt.setInt(4, hotel.getPrice());
             pstmt.setInt(5, hotel.getRooms());
             pstmt.setDate(6, (java.sql.Date) hotel.getAvailableFrom());
-            pstmt.setDate(6, (java.sql.Date) hotel.getAvailableTill());
+            pstmt.setDate(7, (java.sql.Date) hotel.getAvailableTill());
             int state = pstmt.executeUpdate();
             if(state==1)
                 return true;
@@ -161,7 +161,7 @@ public class HotelDataAccess {
     public List<Hotel> queryHotelListFromTAJ(String city,
                                                java.sql.Date availableFrom) {
         String sql = "select * from taj_hotel where hotelCity=? and availableFrom=? ";
-        String hid_column_name = "taj_fid";
+        String hid_column_name = "taj_hid";
         return queryHotelListFromServer(city,availableFrom, sql, hid_column_name);
     }
 
@@ -213,13 +213,11 @@ public class HotelDataAccess {
             }
             return list;
         } catch (SQLException e) {
-            // TODO Auto-generated catch block
             e.printStackTrace();
         } finally {
             try {
                 conn.close();
             } catch (SQLException e) {
-                // TODO Auto-generated catch block
                 e.printStackTrace();
             }
         }
