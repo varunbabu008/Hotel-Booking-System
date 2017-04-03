@@ -5,6 +5,7 @@ import java.io.IOException;
  * Created by varunbabu on 31/3/17.
  */
 public class BrokerServerHOPP {
+
     protected BrokerClientHOPP bcHOPPtoTAJ, bcHOPPtoBLU, bcHOPPtoRAD;
 
     public BrokerServerHOPP() {
@@ -23,10 +24,13 @@ public class BrokerServerHOPP {
 
 
     public String[] queryResp(String str) {
+        //Checking all the 3 servers for available hotels
         String[] tajResp = bcHOPPtoTAJ.queryReq(str);
         String[] bluResp = bcHOPPtoBLU.queryReq(str);
         String[] radResp = bcHOPPtoRAD.queryReq(str);
         String[] result = new String[tajResp.length+bluResp.length+radResp.length];
+
+        //putting all the querry results into a single array and returning the result
         System.arraycopy(tajResp, 0, result, 0, tajResp.length);
         System.arraycopy(bluResp, 0, result, tajResp.length, bluResp.length);
         System.arraycopy(radResp, 0, result, tajResp.length+bluResp.length, radResp.length);

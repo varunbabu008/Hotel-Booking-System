@@ -18,7 +18,7 @@ public class HotelDataAccess {
 
 
     public boolean queryRoomsExistedFromTAJ(String hid) {
-        String sql = "select taj_hid,rooms from taj_hotel where hid=? ";
+        String sql = "select taj_hid,rooms from taj_hotel where taj_hid=? ";
         return queryRoomsExistedFromServer(hid, sql);
     }
 
@@ -65,6 +65,7 @@ public class HotelDataAccess {
         Connection conn = util.getConn();
         try {
             PreparedStatement pstmt = conn.prepareStatement(sql);
+            //passing the parameter hid
             pstmt.setString(1, hid);
             ResultSet rs = pstmt.executeQuery();
             while(rs.next()){
@@ -160,21 +161,21 @@ public class HotelDataAccess {
 
     public List<Hotel> queryHotelListFromTAJ(String city,
                                                java.sql.Date availableFrom) {
-        String sql = "select * from taj_hotel where hotelCity=? and availableFrom=? ";
+        String sql = "select * from taj_hotel where hotelCity=? and availableFrom = ? ";
         String hid_column_name = "taj_hid";
         return queryHotelListFromServer(city,availableFrom, sql, hid_column_name);
     }
 
 
     public List<Hotel> queryHotelListFromBLU(String city, java.sql.Date availableFrom) {
-        String sql = "select * from blu_hotel where hotelCity=? and availableFrom=? ";
+        String sql = "select * from blu_hotel where hotelCity=? and availableFrom = ? ";
         String hid_column_name = "blu_hid";
         return queryHotelListFromServer(city, availableFrom, sql, hid_column_name);
     }
 
 
     public List<Hotel> queryHotelListfromRAD(String city, java.sql.Date availableFrom) {
-        String sql = "select * from rad_hotel where hotelCity=? and availableFrom=?  ";
+        String sql = "select * from rad_hotel where hotelCity=? and availableFrom = ? ";
         String hid_column_name = "rad_hid";
         return queryHotelListFromServer(city,availableFrom, sql, hid_column_name);
     }

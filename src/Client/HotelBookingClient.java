@@ -4,10 +4,6 @@ import java.io.*;
 
 public class HotelBookingClient {
 
-    private static String DIR = "dir";
-    private static String QUIT = "quit";
-    private static String CD = "cd";
-    private static String GET ="get";
 
     protected BufferedReader console;
     protected HotelBookingClientHOPP clientHOPP;
@@ -55,22 +51,31 @@ public class HotelBookingClient {
                 e.printStackTrace();
                 System.exit(1);
             }
+            // To find the available hotels
 
             if (line.toUpperCase().startsWith(HotelBookingConstants.QUERY)){
                 // query <city,date> 	one-stop trip
                 query(losePrefix(line, HotelBookingConstants.QUERY));
+
+                //Register a new user
             }else if (line.toUpperCase().startsWith(Server.HotelBookingConstants.REG)) {
                 // reg <airline,username,phone,email,creditcard>
                 if(clientHOPP.checkInputOfReg(losePrefix(line, HotelBookingConstants.REG)))
                     register(losePrefix(line, HotelBookingConstants.REG));
+
+                //Order a new Room
             } else if (line.toUpperCase().startsWith(HotelBookingConstants.ORDER)) {
                 // order <fid1,fid2,username>
                 // order fid username
                 order(losePrefix(line, HotelBookingConstants.ORDER));
+
+                //Check for ordered rooms in hotel
             } else if (line.toUpperCase().startsWith(HotelBookingConstants.CHECK)) {
                 // check <airline,username>
                 if(clientHOPP.checkInputOfCheck(losePrefix(line, HotelBookingConstants.CHECK)))
                     check(losePrefix(line,HotelBookingConstants.CHECK));
+
+                //exit from the system
             } else if (line.equalsIgnoreCase(HotelBookingConstants.QUIT)) {
                 quit();
             } else {

@@ -53,9 +53,6 @@ public final class DBUtil {
     public Connection getConn(){
         Connection conn = null;
         try {
-            System.out.println(url);
-            System.out.println(user);
-            System.out.println(password);
             conn = DriverManager.getConnection(url, user, password);
 
 

@@ -29,16 +29,11 @@ public class HotelServerHOPP {
             } else if (hotel.equalsIgnoreCase(HotelBookingConstants.BLU)) {
                 list1 = dao.queryHotelListFromBLU(arr[0],availableFrom);
             } else if (hotel.equalsIgnoreCase(HotelBookingConstants.RAD)) {
-                list1 = dao.queryHotelListfromRAD(arr[0], availableFrom);
+                list1 = dao.queryHotelListfromRAD(arr[0],availableFrom);
             } else
                 return null;
         }
 
-        //if (list1 != null) {
-          //  for (Hotel f : list1) {
-            //    list1.add(f);
-            //}
-        //}
         return list1;
     }
 
@@ -65,9 +60,11 @@ public class HotelServerHOPP {
             userDao = new UserDataAccess();
 
             if (hid.toUpperCase().startsWith(HotelBookingConstants.TAJ)) {
+                // checking if the rooms coloumn is more than one
                 if (hotelDao.queryRoomsExistedFromTAJ(hid) && userDao.queryUserExistedFromTAJ(username)) {
+                    //checking if the order already exists
                     if(orderDao.orderExistedFromTAJ(hid, username))
-                        System.out.println("Oder existed!");
+                        System.out.println("Order exist!");
                     else{
                         if (hotelDao.updateRoomsToTAJ(hid)) {
                             Order order = new Order();
@@ -79,10 +76,10 @@ public class HotelServerHOPP {
                         }
                     }
                 }
-            } else if (hid.toUpperCase().startsWith(HotelBookingConstants.TAJ)) {
+            } else if (hid.toUpperCase().startsWith(HotelBookingConstants.BLU)) {
                 if (hotelDao.queryRoomsExistedFromBLU(hid) && userDao.queryUserExistedFromBLU(username)) {
                     if(orderDao.orderExistedFromBLU(hid, username))
-                        System.out.println("Order existed!");
+                        System.out.println("Order exist!");
                     else{
                         if (hotelDao.updateRoomsToBLU(hid)) {
                             Order order = new Order();
@@ -97,7 +94,7 @@ public class HotelServerHOPP {
             } else if (hid.toUpperCase().startsWith(HotelBookingConstants.RAD)) {
                 if (hotelDao.queryRoomsExistedFromRAD(hid) && userDao.queryUserExistedFromRAD(username)) {
                     if(orderDao.orderExistedFromRAD(hid, username))
-                        System.out.println("Order existed!");
+                        System.out.println("Order exist!");
                     else{
                         if (hotelDao.updateRoomsToRAD(hid)) {
                             Order order = new Order();
@@ -134,7 +131,7 @@ public class HotelServerHOPP {
                 if (!dao.queryUserExistedFromTAJ(username)) {
                     if (dao.insertUserToTAJ(user)) {
                         System.out
-                                .println("----insert a new user successfully------");
+                                .println("----inserted a new user successfully------");
                         flag = true;
                     }
                 }
@@ -142,7 +139,7 @@ public class HotelServerHOPP {
                 if (!dao.queryUserExistedFromBLU(username)) {
                     if (dao.insertUserToBLU(user)) {
                         System.out
-                                .println("----insert a new user successfully------");
+                                .println("----inserted a new user successfully------");
                         flag = true;
                     }
                 }
@@ -150,7 +147,7 @@ public class HotelServerHOPP {
                 if (!dao.queryUserExistedFromRAD(username))
                     if (dao.insertUserToRAD(user)) {
                         System.out
-                                .println("----insert a new user successfully------");
+                                .println("----inserted a new user successfully------");
                         flag = true;
                     }
             }
@@ -161,26 +158,26 @@ public class HotelServerHOPP {
     public List<Order> checkOrders(String str) {
         String[] arr = str.split(" ");
         if (arr.length == 2) {
-            String airline = arr[0];
+            String hotel = arr[0];
             String username = arr[1];
             List<Order> list = new ArrayList<Order>();
             OrderDataAccess dao = new OrderDataAccess();
             UserDataAccess userDao = new UserDataAccess();
-            if (airline.equalsIgnoreCase(HotelBookingConstants.TAJ)) {
+            if (hotel.equalsIgnoreCase(HotelBookingConstants.TAJ)) {
                 if (userDao.queryUserExistedFromTAJ(username))
                     list = dao.checkOrderFromTAJ(username);
                 else
-                    System.out.println("Cannot found this user!");
-            } else if (airline.equalsIgnoreCase(HotelBookingConstants.BLU)) {
+                    System.out.println("User not found!");
+            } else if (hotel.equalsIgnoreCase(HotelBookingConstants.BLU)) {
                 if (userDao.queryUserExistedFromBLU(username))
                     list = dao.checkOrderFromBLU(username);
                 else
-                    System.out.println("Cannot found this user!");
-            } else if (airline.equalsIgnoreCase(HotelBookingConstants.RAD)) {
+                    System.out.println("User not found!");
+            } else if (hotel.equalsIgnoreCase(HotelBookingConstants.RAD)) {
                 if (userDao.queryUserExistedFromRAD(username))
                     list = dao.checkOrderFromRAD(username);
                 else
-                    System.out.println("Cannot found this user!");
+                    System.out.println("User not found!");
             } else
                 list = null;
             return list;

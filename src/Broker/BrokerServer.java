@@ -33,12 +33,12 @@ public class BrokerServer {
                 e.printStackTrace();
                 continue;
             }
-            new ProxySocketHandler(incoming).start();
+            new BrokerSocketHandler(incoming).start();
         }
     }
 }
 
-class ProxySocketHandler extends Thread {
+class BrokerSocketHandler extends Thread {
 
     Socket incoming;
     BufferedReader reader;
@@ -47,11 +47,10 @@ class ProxySocketHandler extends Thread {
     // server-side HOPP
     protected BrokerServerHOPP bsHOPP = new BrokerServerHOPP();
 
-    ProxySocketHandler(Socket incoming) {
+    BrokerSocketHandler(Socket incoming) {
         this.incoming = incoming;
     }
 
-    @Override
     public void run() {
         try {
             reader = new BufferedReader(new InputStreamReader(

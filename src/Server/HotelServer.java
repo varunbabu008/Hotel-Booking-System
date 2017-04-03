@@ -144,7 +144,8 @@ class HotelHandler extends Thread{
 
     private synchronized void orderResponse(String str) {
         if(hopp.orderResp(str)){
-            System.out.println(hopp.orderResp(str));
+            //communicates via hotelServerHopp
+            //System.out.println(hopp.orderResp(str));
             writer.print(HotelBookingConstants.SUCCEEDED+HotelBookingConstants.CR_LF);
         }else{
             System.out.println("----->ERROR");
@@ -161,7 +162,7 @@ class HotelHandler extends Thread{
                     + HotelBookingConstants.CR_LF);
         } else {
             for (Hotel h : list) {
-                String msg = h.getHid()+" [AvailableFrom]"+h.getAvailableFrom()+ "[AvailableTill]"+h.getAvailableTill()+" [Rooms]"+h.getRooms()+" [price]"+h.getPrice();
+                String msg = h.getHid()+" [AvailableFrom] "+h.getAvailableFrom()+ "[AvailableTill] "+h.getAvailableTill()+" [Rooms] "+h.getRooms()+" [price] "+h.getPrice();
                 System.out.println(msg);
                 writer.print(msg + HotelBookingConstants.CR_LF);
             }

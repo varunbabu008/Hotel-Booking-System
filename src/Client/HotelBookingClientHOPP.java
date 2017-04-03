@@ -34,6 +34,7 @@ public class HotelBookingClientHOPP {
 
 
     public String[] queryReq(String input) {
+        //Broker Server listens on this
         writer.print(HotelBookingConstants.QUERY + " " + input
                 + HotelBookingConstants.CR_LF);
         return readLinesFromServer();
@@ -67,7 +68,7 @@ public class HotelBookingClientHOPP {
 
     // order fid1 fid2 username
     // order fid username
-
+    // client hopp writes it to the stream. Broker
     public boolean orderReq(String str) {
         writer.print(HotelBookingConstants.ORDER + " " + str
                 + HotelBookingConstants.CR_LF);

@@ -55,9 +55,9 @@ public class BrokerClientHOPP {
                 list.add(line);
             }
         }
-        String[] flightList = new String[list.size()];
-        list.toArray(flightList);
-        return flightList;
+        String[] hotelList = new String[list.size()];
+        list.toArray(hotelList);
+        return hotelList;
     }
 
     public String[] checkReq(String input) {
