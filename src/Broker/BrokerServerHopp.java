@@ -24,11 +24,13 @@ public class BrokerServerHOPP {
 
 
     public String[] queryResp(String str) {
-        //Checking all the 3 servers for available hotels
+        //Checking all the 3 servers for available hotels using their respective brokerClientHopp
         String[] tajResp = bcHOPPtoTAJ.queryReq(str);
         String[] bluResp = bcHOPPtoBLU.queryReq(str);
         String[] radResp = bcHOPPtoRAD.queryReq(str);
         String[] result = new String[tajResp.length+bluResp.length+radResp.length];
+
+        if () {}
 
         //putting all the querry results into a single array and returning the result
         System.arraycopy(tajResp, 0, result, 0, tajResp.length);

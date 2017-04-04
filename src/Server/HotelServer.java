@@ -87,16 +87,24 @@ class HotelHandler extends Thread{
                 String line = reader.readLine();
                 if (line == null)
                     break;
-                System.out.println("Recieved request: " + line);
+                System.out.println("Received request: " + line);
 
                 if (line.startsWith(HotelBookingConstants.QUERY))
+
                     queryResponse(losePrefix(line, HotelBookingConstants.QUERY), hotel);
+
                 else if (line.startsWith(HotelBookingConstants.REG))
+
                     regResponse(losePrefix(line, HotelBookingConstants.REG));
+
                 else if (line.startsWith(HotelBookingConstants.ORDER))
+
                     orderResponse(losePrefix(line, HotelBookingConstants.ORDER));
+
                 else if (line.startsWith(HotelBookingConstants.CHECK))
+
                     checkResponse(losePrefix(line, HotelBookingConstants.CHECK));
+
                 else if (line.startsWith(HotelBookingConstants.QUIT)) {
                     quit();
                     break;
@@ -116,7 +124,7 @@ class HotelHandler extends Thread{
     public void quit(){
 
     }
-    //Synchronized Only one thread enters at a time
+    //Synchronized Only one thread gets access at a time
     private synchronized void checkResponse(String str) {
         List<Order> list = hopp.checkOrders(str);
         if (list == null){

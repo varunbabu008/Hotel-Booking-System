@@ -59,10 +59,11 @@ class BrokerSocketHandler extends Thread {
             writer = new PrintStream(outstream);
             while (true) {
                 try {
+                    //reading from HotelBookingClientHopp and pass on to brokerServerHopp
                     String line = reader.readLine();
                     if (line == null)
                         break;
-                    System.out.println("Reveived request: " + line);
+                    System.out.println("Received request: " + line);
                     if (line.startsWith(HotelBookingConstants.QUERY))
                         queryResponse(losePrefix(line,
                                 HotelBookingConstants.QUERY));
@@ -116,6 +117,7 @@ class BrokerSocketHandler extends Thread {
     }
 
     private void queryResponse(String str) {
+        //gets the result from the brokerServerHopp
         String[] rs = bsHOPP.queryResp(str);
         for (String line : rs) {
             System.out.println(line);
