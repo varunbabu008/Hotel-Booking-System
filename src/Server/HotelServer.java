@@ -116,7 +116,7 @@ class HotelHandler extends Thread{
     public void quit(){
 
     }
-
+    //Synchronized Only one thread enters at a time
     private synchronized void checkResponse(String str) {
         List<Order> list = hopp.checkOrders(str);
         if (list == null){

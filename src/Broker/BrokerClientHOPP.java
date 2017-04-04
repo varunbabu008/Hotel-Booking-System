@@ -47,6 +47,7 @@ public class BrokerClientHOPP {
             while(true){
                 try {
                     line = reader.readLine();
+                    //line = response;
                 } catch (IOException e) {
                     e.printStackTrace();
                     break;

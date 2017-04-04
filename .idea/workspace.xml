@@ -2,26 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f0a237f7-bc07-4dab-8b59-8d26286cfc58" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/PGDS assign/Client/HotelBookingService.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/Client/HotelBookingService.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/PGDS assign/Broker/ProxySocketHandler.class" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/PGDS assign/Broker/BrokerClientHOPP.class" afterPath="$PROJECT_DIR$/out/production/PGDS assign/Broker/BrokerClientHOPP.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/PGDS assign/Client/HotelBookingClient.class" afterPath="$PROJECT_DIR$/out/production/PGDS assign/Client/HotelBookingClient.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/PGDS assign/Client/HotelBookingConstants.class" afterPath="$PROJECT_DIR$/out/production/PGDS assign/Client/HotelBookingConstants.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/PGDS assign/Server/DB/HotelDataAccess.class" afterPath="$PROJECT_DIR$/out/production/PGDS assign/Server/DB/HotelDataAccess.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/PGDS assign/Server/HotelHandler.class" afterPath="$PROJECT_DIR$/out/production/PGDS assign/Server/HotelHandler.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/PGDS assign/Server/HotelServerHOPP.class" afterPath="$PROJECT_DIR$/out/production/PGDS assign/Server/HotelServerHOPP.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/PGDS assign/Server/util/DBUtil.class" afterPath="$PROJECT_DIR$/out/production/PGDS assign/Server/util/DBUtil.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/PGDS assign/Broker/BrokerServer.class" afterPath="$PROJECT_DIR$/out/production/PGDS assign/Broker/BrokerServer.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/PGDS assign/Broker/BrokerServerHopp.class" afterPath="$PROJECT_DIR$/out/production/PGDS assign/Broker/BrokerServerHopp.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/PGDS assign/Client/HotelBookingClientHOPP.class" afterPath="$PROJECT_DIR$/out/production/PGDS assign/Client/HotelBookingClientHOPP.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Broker/BrokerClientHOPP.java" afterPath="$PROJECT_DIR$/src/Broker/BrokerClientHOPP.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Broker/BrokerServer.java" afterPath="$PROJECT_DIR$/src/Broker/BrokerServer.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Client/HotelBookingClient.java" afterPath="$PROJECT_DIR$/src/Client/HotelBookingClient.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Client/HotelBookingClientHOPP.java" afterPath="$PROJECT_DIR$/src/Client/HotelBookingClientHOPP.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Client/HotelBookingConstants.java" afterPath="$PROJECT_DIR$/src/Client/HotelBookingConstants.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Server/DB/HotelDataAccess.java" afterPath="$PROJECT_DIR$/src/Server/DB/HotelDataAccess.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Server/DB/OrderDataAccess.java" afterPath="$PROJECT_DIR$/src/Server/DB/OrderDataAccess.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Server/HotelServer.java" afterPath="$PROJECT_DIR$/src/Server/HotelServer.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Server/HotelServerHOPP.java" afterPath="$PROJECT_DIR$/src/Server/HotelServerHOPP.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Server/util/DBUtil.java" afterPath="$PROJECT_DIR$/src/Server/util/DBUtil.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Server/util/dbConfig.properties" afterPath="$PROJECT_DIR$/src/Server/util/dbConfig.properties" />
     </list>
     <ignored path="PGDS assign.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -43,21 +32,23 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="OrderDataAccess.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Server/DB/OrderDataAccess.java">
+      <file leaf-file-name="HotelDataAccess.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Server/DB/HotelDataAccess.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="45">
-              <caret line="12" column="0" lean-forward="true" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
-              <folding />
+            <state relative-caret-position="105">
+              <caret line="16" column="0" lean-forward="false" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+              <folding>
+                <element signature="e#6125#6132#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="HotelDataAccess.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Server/DB/HotelDataAccess.java">
+      <file leaf-file-name="OrderDataAccess.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/Server/DB/OrderDataAccess.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2327">
-              <caret line="177" column="83" lean-forward="false" selection-start-line="177" selection-start-column="83" selection-end-line="177" selection-end-column="83" />
+            <state relative-caret-position="469">
+              <caret line="47" column="52" lean-forward="true" selection-start-line="47" selection-start-column="52" selection-end-line="47" selection-end-column="52" />
               <folding />
             </state>
           </provider>
@@ -66,18 +57,8 @@
       <file leaf-file-name="HotelBookingClient.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Client/HotelBookingClient.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1061">
-              <caret line="73" column="16" lean-forward="true" selection-start-line="73" selection-start-column="16" selection-end-line="73" selection-end-column="43" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="BrokerServer.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/Broker/BrokerServer.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="376">
-              <caret line="52" column="0" lean-forward="false" selection-start-line="52" selection-start-column="0" selection-end-line="52" selection-end-column="0" />
+            <state relative-caret-position="345">
+              <caret line="55" column="0" lean-forward="false" selection-start-line="55" selection-start-column="0" selection-end-line="55" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -86,8 +67,20 @@
       <file leaf-file-name="HotelBookingClientHOPP.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Client/HotelBookingClientHOPP.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="786">
-              <caret line="69" column="50" lean-forward="true" selection-start-line="69" selection-start-column="50" selection-end-line="69" selection-end-column="50" />
+            <state relative-caret-position="-1484">
+              <caret line="105" column="0" lean-forward="false" selection-start-line="105" selection-start-column="0" selection-end-line="105" selection-end-column="0" />
+              <folding>
+                <element signature="e#2865#2873#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="BrokerServer.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Broker/BrokerServer.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="331">
+              <caret line="118" column="0" lean-forward="false" selection-start-line="118" selection-start-column="0" selection-end-line="118" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -96,8 +89,8 @@
       <file leaf-file-name="BrokerServerHOPP.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Broker/BrokerServerHOPP.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="8" column="23" lean-forward="false" selection-start-line="8" selection-start-column="22" selection-end-line="8" selection-end-column="23" />
+            <state relative-caret-position="405">
+              <caret line="27" column="0" lean-forward="false" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -106,9 +99,11 @@
       <file leaf-file-name="BrokerClientHOPP.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Broker/BrokerClientHOPP.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="750">
-              <caret line="59" column="25" lean-forward="true" selection-start-line="59" selection-start-column="25" selection-end-line="59" selection-end-column="25" />
-              <folding />
+            <state relative-caret-position="61">
+              <caret line="36" column="0" lean-forward="false" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
+              <folding>
+                <element signature="e#1143#1151#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -116,8 +111,8 @@
       <file leaf-file-name="HotelServer.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Server/HotelServer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="463">
-              <caret line="164" column="157" lean-forward="false" selection-start-line="164" selection-start-column="157" selection-end-line="164" selection-end-column="157" />
+            <state relative-caret-position="223">
+              <caret line="91" column="0" lean-forward="false" selection-start-line="91" selection-start-column="0" selection-end-line="91" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -126,8 +121,8 @@
       <file leaf-file-name="HotelServerHOPP.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Server/HotelServerHOPP.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="217">
-              <caret line="27" column="72" lean-forward="true" selection-start-line="27" selection-start-column="72" selection-end-line="27" selection-end-column="72" />
+            <state relative-caret-position="-126">
+              <caret line="49" column="0" lean-forward="true" selection-start-line="49" selection-start-column="0" selection-end-line="49" selection-end-column="0" />
               <folding>
                 <element signature="e#6246#6253#0" expanded="true" />
               </folding>
@@ -135,13 +130,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DBUtil.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Server/util/DBUtil.java">
+      <file leaf-file-name="Hotel.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Server/Entity/Hotel.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="305">
-              <caret line="61" column="0" lean-forward="false" selection-start-line="61" selection-start-column="0" selection-end-line="61" selection-end-column="0" />
+            <state relative-caret-position="287">
+              <caret line="60" column="0" lean-forward="false" selection-start-line="60" selection-start-column="0" selection-end-line="60" selection-end-column="0" />
               <folding>
-                <element signature="imports" expanded="true" />
+                <element signature="e#344#345#0" expanded="true" />
+                <element signature="e#380#381#0" expanded="true" />
+                <element signature="e#524#525#0" expanded="true" />
+                <element signature="e#560#561#0" expanded="true" />
+                <element signature="e#698#699#0" expanded="true" />
+                <element signature="e#724#725#0" expanded="true" />
+                <element signature="e#1169#1170#0" expanded="true" />
+                <element signature="e#1271#1272#0" expanded="true" />
+                <element signature="e#1299#1300#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -186,19 +189,19 @@
         <option value="$PROJECT_DIR$/src/Client/FileTransferClientUI.java" />
         <option value="$PROJECT_DIR$/src/Server/Entity/Hotel.java" />
         <option value="$PROJECT_DIR$/src/Server/DB/UserDataAccess.java" />
-        <option value="$PROJECT_DIR$/src/Server/DB/OrderDataAccess.java" />
         <option value="$PROJECT_DIR$/src/Broker/HotelBookingConstants.java" />
         <option value="$PROJECT_DIR$/src/Client/HotelBookingConstants.java" />
         <option value="$PROJECT_DIR$/src/Client/HotelBookingClient.java" />
-        <option value="$PROJECT_DIR$/src/Broker/BrokerClientHOPP.java" />
-        <option value="$PROJECT_DIR$/src/Client/HotelBookingClientHOPP.java" />
         <option value="$PROJECT_DIR$/src/Server/util/DBUtil.java" />
         <option value="$PROJECT_DIR$/src/Server/util/dbConfig.properties" />
         <option value="$PROJECT_DIR$/src/Server/HotelServerHOPP.java" />
         <option value="$PROJECT_DIR$/src/Server/DB/HotelDataAccess.java" />
-        <option value="$PROJECT_DIR$/src/Server/HotelServer.java" />
-        <option value="$PROJECT_DIR$/src/Broker/BrokerServerHOPP.java" />
         <option value="$PROJECT_DIR$/src/Broker/BrokerServer.java" />
+        <option value="$PROJECT_DIR$/src/Client/HotelBookingClientHOPP.java" />
+        <option value="$PROJECT_DIR$/src/Broker/BrokerServerHOPP.java" />
+        <option value="$PROJECT_DIR$/src/Server/HotelServer.java" />
+        <option value="$PROJECT_DIR$/src/Broker/BrokerClientHOPP.java" />
+        <option value="$PROJECT_DIR$/src/Server/DB/OrderDataAccess.java" />
       </list>
     </option>
   </component>
@@ -883,7 +886,7 @@
       </extension>
       <option name="MAIN_CLASS_NAME" value="Server.HotelServer" />
       <option name="VM_PARAMETERS" value="" />
-      <option name="PROGRAM_PARAMETERS" value="RAD" />
+      <option name="PROGRAM_PARAMETERS" value="BLU" />
       <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
@@ -949,12 +952,12 @@
       <workItem from="1491128977075" duration="2613000" />
       <workItem from="1491132665543" duration="1835000" />
       <workItem from="1491196624508" duration="4908000" />
-      <workItem from="1491213978802" duration="13191000" />
+      <workItem from="1491213978802" duration="28503000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="59604000" />
+    <option name="totallyTimeSpent" value="74916000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -977,7 +980,7 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16633664" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.16534653" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32876712" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.45445544" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -989,7 +992,7 @@
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32673267" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.20678514" sideWeight="0.5081633" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -1015,7 +1018,10 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="12" />
+      <breakpoints-dialog>
+        <breakpoints-dialog />
+      </breakpoints-dialog>
+      <option name="time" value="24" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -1024,40 +1030,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/Server/util/DBUtil.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="25" column="85" lean-forward="false" selection-start-line="25" selection-start-column="85" selection-end-line="25" selection-end-column="85" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Server/util/dbConfig.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Server/DB/UserDataAccess.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1065">
-          <caret line="71" column="34" lean-forward="false" selection-start-line="71" selection-start-column="34" selection-end-line="71" selection-end-column="34" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Server/HotelServer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2370">
-          <caret line="158" column="26" lean-forward="false" selection-start-line="158" selection-start-column="26" selection-end-line="158" selection-end-column="26" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Client/HotelBookingConstants.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
@@ -1236,13 +1208,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Client/FileTransferTextServer.java" />
-    <entry file="file://$PROJECT_DIR$/src/Server/Entity/Hotel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="750">
-          <caret line="66" column="0" lean-forward="false" selection-start-line="66" selection-start-column="0" selection-end-line="66" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Server/Entity/Order.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
@@ -1297,53 +1262,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Server/HotelServerHOPP.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="217">
-          <caret line="27" column="72" lean-forward="true" selection-start-line="27" selection-start-column="72" selection-end-line="27" selection-end-column="72" />
-          <folding>
-            <element signature="e#6246#6253#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Server/DB/HotelDataAccess.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2327">
-          <caret line="177" column="83" lean-forward="false" selection-start-line="177" selection-start-column="83" selection-end-line="177" selection-end-column="83" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/src/lib/mysql-connector-java-5.1.41-bin.jar!/com/mysql/jdbc/ConnectionImpl.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="2757" column="0" lean-forward="false" selection-start-line="2757" selection-start-column="0" selection-end-line="2757" selection-end-column="0" />
-          <folding>
-            <marker date="1487104077000" expanded="true" signature="87638:87667" ph="SELECT @@ses... " />
-            <marker date="1487104077000" expanded="true" signature="101108:101135" ph="SELECT @@ses... " />
-            <marker date="1487104077000" expanded="true" signature="103567:103596" ph="select @@ses... " />
-            <marker date="1487104077000" expanded="true" signature="110746:110767" ph="/* missingVa... " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Server/DB/OrderDataAccess.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="12" column="0" lean-forward="true" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Server/HotelServer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="463">
-          <caret line="164" column="157" lean-forward="false" selection-start-line="164" selection-start-column="157" selection-end-line="164" selection-end-column="157" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$PROJECT_DIR$/src/lib/mysql-connector-java-5.1.41-bin.jar!/com/mysql/fabric/jdbc/FabricMySQLDriver.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="206">
@@ -1352,10 +1270,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="jar://$PROJECT_DIR$/src/lib/mysql-connector-java-5.1.41-bin.jar!/com/mysql/jdbc/StringUtils.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="193">
+          <caret line="961" column="0" lean-forward="false" selection-start-line="961" selection-start-column="0" selection-end-line="961" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="jar://$PROJECT_DIR$/src/lib/mysql-connector-java-5.1.41-bin.jar!/com/mysql/jdbc/NonRegisteringDriver.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="223">
-          <caret line="120" column="0" lean-forward="false" selection-start-line="120" selection-start-column="0" selection-end-line="120" selection-end-column="0" />
+        <state relative-caret-position="176">
+          <caret line="126" column="0" lean-forward="false" selection-start-line="126" selection-start-column="0" selection-end-line="126" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -1370,42 +1296,141 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Client/HotelBookingClient.java">
+    <entry file="jar://$PROJECT_DIR$/src/lib/mysql-connector-java-5.1.41-bin.jar!/com/mysql/jdbc/ConnectionImpl.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1061">
-          <caret line="73" column="16" lean-forward="true" selection-start-line="73" selection-start-column="16" selection-end-line="73" selection-end-column="43" />
+        <state relative-caret-position="176">
+          <caret line="2757" column="0" lean-forward="false" selection-start-line="2757" selection-start-column="0" selection-end-line="2757" selection-end-column="0" />
+          <folding>
+            <element signature="e#7718#7719#0" expanded="true" />
+            <element signature="e#7794#7795#0" expanded="true" />
+            <element signature="e#8074#8075#0" expanded="true" />
+            <element signature="e#8150#8151#0" expanded="true" />
+            <marker date="1487104077000" expanded="true" signature="87638:87667" ph="SELECT @@ses... " />
+            <marker date="1487104077000" expanded="true" signature="101108:101135" ph="SELECT @@ses... " />
+            <marker date="1487104077000" expanded="true" signature="103567:103596" ph="select @@ses... " />
+            <marker date="1487104077000" expanded="true" signature="110746:110767" ph="/* missingVa... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/src/lib/mysql-connector-java-5.1.41-bin.jar!/com/mysql/jdbc/StatementImpl.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="193">
+          <caret line="182" column="0" lean-forward="false" selection-start-line="182" selection-start-column="0" selection-end-line="182" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/src/lib/mysql-connector-java-5.1.41-bin.jar!/com/mysql/jdbc/PreparedStatement.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="988" column="0" lean-forward="false" selection-start-line="988" selection-start-column="0" selection-end-line="988" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/src/lib/mysql-connector-java-5.1.41-bin.jar!/com/mysql/jdbc/ResultSetImpl.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="193">
+          <caret line="3726" column="0" lean-forward="false" selection-start-line="3726" selection-start-column="0" selection-end-line="3726" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Server/Entity/Hotel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="287">
+          <caret line="60" column="0" lean-forward="false" selection-start-line="60" selection-start-column="0" selection-end-line="60" selection-end-column="0" />
+          <folding>
+            <element signature="e#344#345#0" expanded="true" />
+            <element signature="e#380#381#0" expanded="true" />
+            <element signature="e#524#525#0" expanded="true" />
+            <element signature="e#560#561#0" expanded="true" />
+            <element signature="e#698#699#0" expanded="true" />
+            <element signature="e#724#725#0" expanded="true" />
+            <element signature="e#1169#1170#0" expanded="true" />
+            <element signature="e#1271#1272#0" expanded="true" />
+            <element signature="e#1299#1300#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Server/DB/HotelDataAccess.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="16" column="0" lean-forward="false" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+          <folding>
+            <element signature="e#6125#6132#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Server/HotelServer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="223">
+          <caret line="91" column="0" lean-forward="false" selection-start-line="91" selection-start-column="0" selection-end-line="91" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Client/HotelBookingClientHOPP.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="786">
-          <caret line="69" column="50" lean-forward="true" selection-start-line="69" selection-start-column="50" selection-end-line="69" selection-end-column="50" />
-          <folding />
+        <state relative-caret-position="-1484">
+          <caret line="105" column="0" lean-forward="false" selection-start-line="105" selection-start-column="0" selection-end-line="105" selection-end-column="0" />
+          <folding>
+            <element signature="e#2865#2873#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Broker/BrokerClientHOPP.java">
+    <entry file="file://$PROJECT_DIR$/src/Broker/BrokerServer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="750">
-          <caret line="59" column="25" lean-forward="true" selection-start-line="59" selection-start-column="25" selection-end-line="59" selection-end-column="25" />
+        <state relative-caret-position="331">
+          <caret line="118" column="0" lean-forward="false" selection-start-line="118" selection-start-column="0" selection-end-line="118" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Broker/BrokerServerHOPP.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="23" lean-forward="false" selection-start-line="8" selection-start-column="22" selection-end-line="8" selection-end-column="23" />
+        <state relative-caret-position="405">
+          <caret line="27" column="0" lean-forward="false" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Broker/BrokerServer.java">
+    <entry file="file://$PROJECT_DIR$/src/Broker/BrokerClientHOPP.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="376">
-          <caret line="52" column="0" lean-forward="false" selection-start-line="52" selection-start-column="0" selection-end-line="52" selection-end-column="0" />
+        <state relative-caret-position="61">
+          <caret line="36" column="0" lean-forward="false" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
+          <folding>
+            <element signature="e#1143#1151#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Client/HotelBookingClient.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="55" column="0" lean-forward="false" selection-start-line="55" selection-start-column="0" selection-end-line="55" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Server/HotelServerHOPP.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-126">
+          <caret line="49" column="0" lean-forward="true" selection-start-line="49" selection-start-column="0" selection-end-line="49" selection-end-column="0" />
+          <folding>
+            <element signature="e#6246#6253#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Server/DB/OrderDataAccess.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="469">
+          <caret line="47" column="52" lean-forward="true" selection-start-line="47" selection-start-column="52" selection-end-line="47" selection-end-column="52" />
           <folding />
         </state>
       </provider>
