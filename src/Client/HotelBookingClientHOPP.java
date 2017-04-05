@@ -39,7 +39,7 @@ public class HotelBookingClientHOPP {
                 + HotelBookingConstants.CR_LF);
         return readLinesFromServer();
     }
-
+    //registering a user
     public boolean regReq(String input) {
         writer.print(HotelBookingConstants.REG + " " + input
                 + HotelBookingConstants.CR_LF);
@@ -126,7 +126,7 @@ public class HotelBookingClientHOPP {
             String Date = arr[1];
             return true;
         }
-       return false;
+        return false;
 
     }
 
@@ -210,7 +210,7 @@ public class HotelBookingClientHOPP {
         return readLinesFromServer();
     }
 
-// for order hotels
+    // for order hotels
     public boolean checkInputOfOrder(String input) {
 
         //order cea030110 varun
@@ -218,7 +218,7 @@ public class HotelBookingClientHOPP {
 
         String[] arr = input.split(" ");
 
-         if(arr.length == 2){
+        if(arr.length == 2){
             String hid = arr[1];
             String username = arr[3];
             String hidRE = "(taj|blu|rad)0[1-4]0[1-4][0-3][0-9]";

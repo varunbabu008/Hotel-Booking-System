@@ -14,6 +14,7 @@ public class HotelBookingClient {
             System.err.println("Usage: Client address");
             System.exit(1);
         }
+        //creates a new instance of the client
         HotelBookingClient ui = new HotelBookingClient(args[0]);
         ui.loop();
     }
@@ -37,14 +38,16 @@ public class HotelBookingClient {
             try {
 
                 System.out.println("************ Welcome to Hotel Booking System ************");
-                System.out.println("Hotel Booking request options: "
+                System.out.println("Flight Booking request options: "
                         + Server.HotelBookingConstants.QUERY + " | "
                         + Server.HotelBookingConstants.REG + " | "
                         + Server.HotelBookingConstants.ORDER + " | "
                         + Server.HotelBookingConstants.CHECK + " | Enter "
                         + Server.HotelBookingConstants.QUIT + " to exit.");
                 System.out.print("Enter request: ");
+                //reads the request from the client
                 line = console.readLine();
+                //prints it out on the screen
                 System.out.println("Request was " + line);
             } catch(IOException e) {
                 clientHOPP.quit();
@@ -54,26 +57,28 @@ public class HotelBookingClient {
             // To find the available hotels
 
             if (line.toUpperCase().startsWith(HotelBookingConstants.QUERY)){
-
+                // query <city,date> 	one-stop trip
                 query(losePrefix(line, HotelBookingConstants.QUERY));
 
                 //Register a new user
             }else if (line.toUpperCase().startsWith(Server.HotelBookingConstants.REG)) {
+                // reg <airline,username,phone,email,creditcard>
                 if(clientHOPP.checkInputOfReg(losePrefix(line, HotelBookingConstants.REG)))
                     register(losePrefix(line, HotelBookingConstants.REG));
 
                 //Order a new Room
             } else if (line.toUpperCase().startsWith(HotelBookingConstants.ORDER)) {
-
+                // order <fid1,fid2,username>
+                // order fid username
                 order(losePrefix(line, HotelBookingConstants.ORDER));
 
                 //Check for ordered rooms in hotel
             } else if (line.toUpperCase().startsWith(HotelBookingConstants.CHECK)) {
-
+                // check <airline,username>
                 if(clientHOPP.checkInputOfCheck(losePrefix(line, HotelBookingConstants.CHECK)))
-
                     check(losePrefix(line,HotelBookingConstants.CHECK));
 
+                //exit from the system
             } else if (line.equalsIgnoreCase(HotelBookingConstants.QUIT)) {
                 quit();
             } else {
@@ -91,7 +96,7 @@ public class HotelBookingClient {
 
     private void register(String input) {
         if(clientHOPP.regReq(input)){
-            System.out.println("New user registered!");
+            System.out.println("Registered your infomation successfully!");
         }else
             System.out.println("Failed");;
     }

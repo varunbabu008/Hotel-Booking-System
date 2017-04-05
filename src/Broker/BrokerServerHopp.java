@@ -1,6 +1,8 @@
 package Broker;
 
 import java.io.IOException;
+import java.util.ArrayList;
+
 /**
  * Created by varunbabu on 31/3/17.
  */
@@ -24,22 +26,28 @@ public class BrokerServerHOPP {
 
 
     public String[] queryResp(String str) {
-        //Checking all the 3 servers for available hotels using their respective brokerClientHopp
+        //Checking all the 3 servers for available hotels
+        ArrayList<String[]> concatresult = new ArrayList<>();
+
+        //result.add(bcHOPPtoTAJ.queryReq(str));
         String[] tajResp = bcHOPPtoTAJ.queryReq(str);
         String[] bluResp = bcHOPPtoBLU.queryReq(str);
         String[] radResp = bcHOPPtoRAD.queryReq(str);
-
-        //checks added by Lawrence
-        if (tajResp==null) {tajResp=new String[0];}
-        if (bluResp==null) {bluResp=new String[0];}
-        if (radResp==null) {radResp=new String[0];}
         String[] result = new String[tajResp.length+bluResp.length+radResp.length];
 
+        concatresult.add(tajResp);
+        concatresult.add(bluResp);
+        concatresult.add(radResp);
+
+        //concatresult.toArray();
+        String[] hotelList = new String[concatresult.size()];
+        concatresult.toArray(hotelList);
+
         //putting all the querry results into a single array and returning the result
-        System.arraycopy(tajResp, 0, result, 0, tajResp.length);
-        System.arraycopy(bluResp, 0, result, tajResp.length, bluResp.length);
-        System.arraycopy(radResp, 0, result, tajResp.length+bluResp.length, radResp.length);
-        return result;
+        //System.arraycopy(tajResp, 0, result, 0, tajResp.length);
+        //System.arraycopy(bluResp, 0, result, tajResp.length, bluResp.length);
+        //System.arraycopy(radResp, 0, result, tajResp.length+bluResp.length, radResp.length);
+        return hotelList;
     }
 
 

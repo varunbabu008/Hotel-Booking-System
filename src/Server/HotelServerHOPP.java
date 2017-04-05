@@ -130,24 +130,21 @@ public class HotelServerHOPP {
             if (hotel.equalsIgnoreCase(HotelBookingConstants.TAJ)) {
                 if (!dao.queryUserExistedFromTAJ(username)) {
                     if (dao.insertUserToTAJ(user)) {
-                        System.out
-                                .println("----inserted a new user successfully------");
+                        System.out.println("----inserted a new user successfully------");
                         flag = true;
                     }
                 }
             } else if (hotel.equalsIgnoreCase(HotelBookingConstants.BLU)) {
                 if (!dao.queryUserExistedFromBLU(username)) {
                     if (dao.insertUserToBLU(user)) {
-                        System.out
-                                .println("----inserted a new user successfully------");
+                        System.out.println("----inserted a new user successfully------");
                         flag = true;
                     }
                 }
             } else if (hotel.equalsIgnoreCase(HotelBookingConstants.RAD)) {
                 if (!dao.queryUserExistedFromRAD(username))
                     if (dao.insertUserToRAD(user)) {
-                        System.out
-                                .println("----inserted a new user successfully------");
+                        System.out.println("----inserted a new user successfully------");
                         flag = true;
                     }
             }
