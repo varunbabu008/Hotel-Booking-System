@@ -52,7 +52,7 @@ public class BrokerClientHOPP {
                     e.printStackTrace();
                     break;
                 }if(line.equals(""))
-                    return null;
+                    break;
                 list.add(line);
             }
         }

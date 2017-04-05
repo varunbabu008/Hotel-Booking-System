@@ -28,6 +28,8 @@ public class BrokerServerHOPP {
         String[] tajResp = bcHOPPtoTAJ.queryReq(str);
         String[] bluResp = bcHOPPtoBLU.queryReq(str);
         String[] radResp = bcHOPPtoRAD.queryReq(str);
+
+        //checks added by Lawrence
         if (tajResp==null) {tajResp=new String[0];}
         if (bluResp==null) {bluResp=new String[0];}
         if (radResp==null) {radResp=new String[0];}
