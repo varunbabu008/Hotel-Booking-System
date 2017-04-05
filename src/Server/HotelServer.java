@@ -3,6 +3,7 @@ package Server;
 
 import Server.Entity.Hotel;
 import Server.Entity.Order;
+import java.lang.Thread;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -65,7 +66,7 @@ public class HotelServer {
 
 }
 
-class HotelHandler extends Thread{
+class HotelHandler extends Thread {
     Socket incoming;
     BufferedReader reader;
     PrintStream writer;
@@ -73,6 +74,7 @@ class HotelHandler extends Thread{
     String hotel;
 
     public HotelHandler(Socket incoming,String hotel){
+        super();
         this.incoming = incoming;
         this.hotel = hotel;
     }
@@ -81,7 +83,7 @@ class HotelHandler extends Thread{
         try {
             reader = new BufferedReader(new InputStreamReader(incoming.getInputStream()));
             writer = new PrintStream(incoming.getOutputStream());
-            writer.print("Hotel server send response " + HotelBookingConstants.CR_LF);
+            writer.print("Hotel server send response " + Thread.currentThread().getName() + HotelBookingConstants.CR_LF);
             while (true) {
 
                 String line = reader.readLine();
@@ -174,8 +176,8 @@ class HotelHandler extends Thread{
                 System.out.println(msg);
                 writer.print(msg + HotelBookingConstants.CR_LF);
             }
-            writer.print(HotelBookingConstants.CR_LF);
         }
+        writer.print(HotelBookingConstants.CR_LF);
     }
 
     private String losePrefix(String str, String prefix) {

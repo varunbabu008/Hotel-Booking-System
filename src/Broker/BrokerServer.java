@@ -119,6 +119,8 @@ class BrokerSocketHandler extends Thread {
     private void queryResponse(String str) {
         //gets the result from the brokerServerHopp
         String[] rs = bsHOPP.queryResp(str);
+        // Consult--if not entering for loop, send synch CRLF to client
+        if(rs.length==0) writer.print(HotelBookingConstants.CR_LF);
         for (String line : rs) {
             System.out.println(line);
             writer.print(line + HotelBookingConstants.CR_LF);
