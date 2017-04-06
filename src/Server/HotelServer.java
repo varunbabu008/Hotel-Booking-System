@@ -157,7 +157,7 @@ class HotelHandler extends Thread{
 
     private synchronized void queryResponse(String query,String hotel) {
         List<Hotel> list = hopp.queryResp(query,hotel);
-        if (list == null){
+        if (list == null || list.size()==0){
             writer.print(HotelBookingConstants.ERROR
                     + HotelBookingConstants.CR_LF);
         } else {

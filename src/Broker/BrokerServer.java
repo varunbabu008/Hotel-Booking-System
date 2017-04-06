@@ -62,7 +62,7 @@ class BrokerSocketHandler extends Thread {
                     String line = reader.readLine();
                     if (line == null)
                         break;
-                    System.out.println("Received request: " + line);
+                    System.out.println("Reveived request: " + line);
                     if (line.startsWith(HotelBookingConstants.QUERY))
                         queryResponse(losePrefix(line,
                                 HotelBookingConstants.QUERY));
@@ -87,18 +87,6 @@ class BrokerSocketHandler extends Thread {
     private void quit() {
         bsHOPP.quit();
     }
-
-    private void queryResponse(String str) {
-        String[] rs = bsHOPP.queryResp(str);
-        if(rs.length==0)
-            writer.print(HotelBookingConstants.CR_LF);
-        for (String line : rs) {
-            System.out.println(line);
-            writer.print(line + HotelBookingConstants.CR_LF);
-        }
-        writer.print(HotelBookingConstants.CR_LF);
-    }
-
 
     private void checkResponse(String str) {
         String[] rs = bsHOPP.checkOrders(str);
@@ -127,6 +115,16 @@ class BrokerSocketHandler extends Thread {
         writer.print(HotelBookingConstants.CR_LF);
     }
 
+    private void queryResponse(String str) {
+        String[] rs = bsHOPP.queryResp(str);
+
+        if(rs.length==0) writer.print(HotelBookingConstants.CR_LF);
+        for (String line : rs) {
+            System.out.println(line);
+            writer.print(line + HotelBookingConstants.CR_LF);
+        }
+        writer.print(HotelBookingConstants.CR_LF);
+    }
 
     private String losePrefix(String str, String prefix) {
         int index = prefix.length();
