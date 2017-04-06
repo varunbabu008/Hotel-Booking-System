@@ -158,15 +158,15 @@ class HotelHandler extends Thread{
     private synchronized void queryResponse(String query,String hotel) {
         List<Hotel> list = hopp.queryResp(query,hotel);
         if (list == null || list.size()==0){
-            writer.print(HotelBookingConstants.ERROR
-                    + HotelBookingConstants.CR_LF);
+            //writer.print(HotelBookingConstants.ERROR + HotelBookingConstants.CR_LF);
+            writer.print(HotelBookingConstants.CR_LF);
         } else {
             for (Hotel h : list) {
                 String msg = h.getHid()+" [AvailableFrom] "+h.getAvailableFrom()+ "[AvailableTill] "+h.getAvailableTill()+" [Rooms] "+h.getRooms()+" [price] "+h.getPrice();
                 System.out.println(msg);
                 writer.print(msg + HotelBookingConstants.CR_LF);
             }
-
+            writer.print(HotelBookingConstants.CR_LF);
         }
         writer.print(HotelBookingConstants.CR_LF);
 
